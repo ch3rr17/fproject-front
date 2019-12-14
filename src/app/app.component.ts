@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'final-project-front';
   movies;
   movieSearch;
-  posterPathURL: string = 'http://image.tmdb.org/t/p/w92';
+  posterPathURL: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(public api: ApiService) {}
   //  ngOnInit() {
   //    this.api.getMovies()

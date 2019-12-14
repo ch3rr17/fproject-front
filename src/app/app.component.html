@@ -1,25 +1,18 @@
-
-<div style="text-align: center; padding-top: 10px">
-  <input [(ngModel)]="movieSearch" placeholder="search for a movie ..."/>
-  <button (click)="getMovies()">Search movie</button>
-</div>
 <div class="main-container">
-  <div class="clr-row" *ngFor="let result of movies.results">
-    <div class="clr-col">
-        <span>{{result.title}}</span>
-    </div>
-    <div class="clr-col">
-        <span>{{result.release_date | date: 'mediumDate'}}</span>
-    </div>
-    <div class="clr-col">
-        <span> <img [src]= "posterPathURL + result.poster_path "></span>
+  <form clrForm>
+    <input clrInput placeholder="My input" name="input" [(ngModel)]="movieSearch" placeholder="search for a movie ..."
+      autofocus>
+      <button (click)="getMovies()" class="btn btn-outline">Search movie</button>
+    </form>
+    <div class="content-container">
+      
+    <div class="clr-row">
+      <div class=" clr-col-sm-12 clr-col-md-4" *ngFor="let movie of movies?.results">
+          <!-- <pre>{{movie | json }}</pre> -->
+        <p>{{movie.title}}</p>
+        <p>{{movie.release_date | date: 'mediumDate'}}</p>
+        <p><img [src]="posterPathURL + movie.poster_path"></p>
+      </div>
     </div>
   </div>
 </div>
-<!-- 
-<div *ngFor="let result of movies.results" style="text-align: center">
- <h4>{{result.title}}</h4>
- <h4>{{result.release_date | date: 'mediumDate'}}</h4>
- <h4>{{result.popularity}}</h4>
- <img [src]="'http://image.tmdb.org/t/p/w92' + result.poster_path">
-</div> -->
