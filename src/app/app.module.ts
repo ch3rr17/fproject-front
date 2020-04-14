@@ -9,11 +9,19 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-import { ApiService } from './movie.service';
+import { MovieService } from './movie.service';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterComponent,
+    LoginComponent,
+    FavoriteComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,7 @@ import { ApiService } from './movie.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

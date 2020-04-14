@@ -16,7 +16,7 @@
         <p>{{movie.title}}</p>
         <p>{{movie.release_date | date: 'mediumDate'}}</p>
         <p><img [src]="posterPathURL + movie.poster_path"></p>
-        <!-- <p> <clr-icon shape="heart"></clr-icon><button (click)="addFavMovie()" class="btn btn-outline" style="margin: 0;">Add as favorite</button></p> -->
+        <p> <clr-icon shape="heart"></clr-icon><button (click)="addFavMovie()" class="btn btn-outline" style="margin: 0;">Add as favorite</button></p>
       </div>
       
     </div>

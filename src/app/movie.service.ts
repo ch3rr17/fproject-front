@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient }  from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class ApiService {
+export class MovieService {
 
   constructor(public http: HttpClient) { }
 
@@ -11,5 +11,4 @@ export class ApiService {
     console.log('URL', url);
     return this.http.get(url);
   }
-
 }
